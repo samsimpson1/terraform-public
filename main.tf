@@ -8,3 +8,7 @@ terraform {
 }
 
 provider "github" {}
+
+provider "vault" {
+  add_address_to_env = true
+}
