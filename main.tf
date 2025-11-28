@@ -5,6 +5,12 @@ terraform {
       version = "~> 6.0"
     }
   }
+
+  backend "s3" {
+    bucket = "sam-s-tf-state"
+    key = "terraform-public.tfstate"
+    region = "eu-west-1"
+  }
 }
 
 provider "github" {}
